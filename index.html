@@ -516,7 +516,7 @@
         </h5>
         <div class="d-flex flex-column gap-3">
 
-          <div class="cert-card">
+          <div class="cert-card" role="button" tabindex="0" data-img="images/Data_analytics_essentials.jpg">
             <div class="cert-icon"><i class="fa-solid fa-chart-line"></i></div>
             <div>
               <h6>Data Analytics Essentials</h6>
@@ -524,7 +524,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card" role="button" tabindex="0" data-img="images/C++_cert.jpg">
             <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
             <div>
               <h6>CS107: C++ Programming</h6>
@@ -532,7 +532,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card" role="button" tabindex="0" data-img="images/Data_visualization_python.jpg">
             <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
             <div>
               <h6>Data Visualiziation using Python</h6>
@@ -540,7 +540,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card" role="button" tabindex="0" data-img="images/Data_science.jpg">
             <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
             <div>
               <h6>Basic of Data Science</h6>
@@ -548,7 +548,7 @@
             </div>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card" role="button" tabindex="0" data-img="images/IT_tech_support.jpg">
             <div class="cert-icon"><i class="fa-solid fa-headset"></i></div>
             <div>
               <h6>Technical Support Fundamentals</h6>
@@ -736,6 +736,17 @@
 <style>
   #formToast.show { opacity:1; transform:translateX(-50%) translateY(0); }
 </style>
+
+
+<!-- Image modal (custom) -->
+<div id="imageModal" class="image-modal" aria-hidden="true">
+  <div class="image-modal__overlay" data-action="close"></div>
+  <div class="image-modal__content" role="dialog" aria-modal="true" aria-labelledby="imageModalCaption">
+    <button class="image-modal__close" aria-label="Close" data-action="close">&times;</button>
+    <img id="imageModalImg" src="" alt="Certificate preview" />
+    <div class="image-modal__caption" id="imageModalCaption"></div>
+  </div>
+</div>
 
 
 <!-- Bootstrap JS -->

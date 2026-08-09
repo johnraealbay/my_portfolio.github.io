@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRevealOnScroll();
   initContactForm();
   initSmoothScroll();
+  initImageModal();
 });
 
 /* ============================================================
@@ -282,6 +283,59 @@ function initContactForm() {
         }
       });
     }
+  });
+}
+
+/* ============================================================
+   IMAGE MODAL - clickable containers (certificates)
+   ============================================================ */
+function initImageModal() {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('imageModalImg');
+  const modalCaption = document.getElementById('imageModalCaption');
+  if (!modal || !modalImg) return;
+
+  function openModal(src, caption) {
+    modalImg.src = src || '';
+    modalImg.alt = caption || 'Preview';
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    modal.focus?.();
+  }
+
+  function closeModal() {
+    modal.setAttribute('aria-hidden', 'true');
+    modalImg.src = '';
+    modalCaption.textContent = '';
+    document.body.style.overflow = '';
+  }
+
+  // Click handlers for elements with .cert-card and a data-img attribute
+  document.querySelectorAll('.cert-card[data-img]').forEach(card => {
+    const imgSrc = card.dataset.img;
+    const caption = card.querySelector('h6')?.textContent?.trim() || '';
+
+    card.addEventListener('click', () => openModal(imgSrc, caption));
+    // keyboard accessibility: Enter or Space
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(imgSrc, caption);
+      }
+    });
+  });
+
+  // close buttons / overlay
+  modal.querySelectorAll('[data-action="close"]').forEach(el => el.addEventListener('click', closeModal));
+
+  // close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
+  });
+
+  // click outside image to close
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
   });
 }
 
