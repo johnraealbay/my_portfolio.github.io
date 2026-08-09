@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of a web developer showcasing skills, projects, and experience." />
+  <title> My Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Font Awesome 6.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Portfolio CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">
+      <span>&lt;Luckyy/&gt;</span> <span>Portfolio</span>
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item ms-lg-2">
+          <a class="btn-primary-grad" href="#contact" style="padding:.6rem 1.4rem;border-radius:50px;font-size:.85rem;">
+            <i class="fa-solid fa-paper-plane"></i> Contact
+          </a>
+        </li>
+        <li class="nav-item ms-lg-2">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <div class="container">
+    <div class="row align-items-center gy-5">
+
+      <!-- Text -->
+      <div class="col-lg-7 order-2 order-lg-1">
+        <p class="hero-greeting">Hello, World!</p>
+
+        <h1 class="hero-name">
+          I'm <span class="grad-text">Johnrae Albay</span>
+        </h1>
+
+        <p class="hero-title">
+          <span id="typed-text"></span><span class="cursor" aria-hidden="true"></span>
+        </p>
+
+        <p class="hero-bio">
+          A passionate Software Developer building clean, functional, and user-friendly
+          web experiences. I love turning complex problems into elegant solutions.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary-grad">
+            <i class="fa-solid fa-rocket"></i> View Projects
+          </a>
+          <a href="https://drive.google.com/file/d/18I5J2YA_6kBk6e1xhfjJ--LAJuj8a1hB/view?usp=drive_link" class="btn-outline-grad" download>
+            <i class="fa-solid fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn-outline-grad">
+            <i class="fa-solid fa-envelope"></i> Contact Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-5 order-1 order-lg-2">
+        <div class="hero-img-wrap">
+          <div class="hero-img-ring">
+            <div class="hero-img-inner">
+              <!-- Replace with your actual photo -->
+              <img
+                src="images/Johnrae.png"
+                alt="John Rae Doe profile photo"
+              />
+            </div>
+          </div>
+          <!--- <div class="hero-badge">
+            <span class="dot"></span>
+            Currently looking for Work
+          </div> --->
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+
+  <div class="scroll-down" aria-hidden="true">
+    <span>scroll</span>
+    <span class="arrow"></span>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+<section id="about">
+  <div class="container">
+
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">About <span class="grad-text">Me</span></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="row align-items-center gy-5">
+
+      <!-- Image -->
+      <div class="col-lg-5 reveal">
+        <div class="about-img-wrap">
+          <div class="about-img-box">
+            <img
+              src="images/AboutMe.jpg"
+              alt="About Me"
+              style="border-radius:12px;"
+            />
+          </div>
+          <!-- Quick stats below image -->
+          <div class="row g-3 mt-3">
+            <div class="col-4"><div class="about-stat"><div class="num grad-text">4+</div><div class="label">Years Coding</div></div></div>
+            <div class="col-4"><div class="about-stat"><div class="num grad-text">10+</div><div class="label">Projects Done</div></div></div>
+            <div class="col-4"><div class="about-stat"><div class="num grad-text">5+</div><div class="label">Certificates</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="col-lg-7 reveal">
+        <h3 class="section-title" style="font-size:clamp(1.5rem,3vw,2rem);">
+          Building the web, one line at a time
+        </h3>
+        <p style="color:var(--muted);margin-bottom:1rem;">
+          I'm a passionate software developer with experience in web development 
+          and Management Information Systems (MIS). I enjoy building clean, functional, 
+          and user-friendly applications that solve real-world problems.
+        </p>
+        <p style="color:var(--muted);margin-bottom:1.5rem;">
+          My focus is on creating efficient and intuitive digital experiences through 
+          thoughtful design and well-structured code. I enjoy turning ideas into practical 
+          solutions that deliver value to users and organizations.
+        </p>
+        <p style="color:var(--muted);margin-bottom:2rem;">
+          Driven by curiosity and continuous learning, I'm always exploring new technologies, 
+          refining my skills, and staying up to date with the ever-evolving world of software development.
+        </p>
+
+        <!-- Info list -->
+        <div class="about-info-item">
+          <div class="icon"><i class="fa-solid fa-user"></i></div>
+          <div><div class="key">Full Name</div><div class="val">Johnrae R. Albay</div></div>
+        </div>
+        <div class="about-info-item">
+          <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div><div class="key">Location</div><div class="val">Iloilo City, Philippines</div></div>
+        </div>
+        <div class="about-info-item">
+          <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div><div class="key">Degree</div><div class="val">BS Computer Science</div></div>
+        </div>
+        <div class="about-info-item">
+          <div class="icon"><i class="fa-solid fa-circle-check"></i></div>
+          <div><div class="key">Status</div><div class="val" style="color:#22c55e;">Looking for Work and Opportunities</div></div>
+        </div>
+
+        <div class="mt-3 d-flex gap-2 flex-wrap">
+          <a href="#contact" class="btn-primary-grad" style="font-size:.85rem;padding:.6rem 1.4rem;">
+            <i class="fa-solid fa-paper-plane"></i> Let's Talk
+          </a>
+          <a href="https://drive.google.com/file/d/18I5J2YA_6kBk6e1xhfjJ--LAJuj8a1hB/view?usp=drive_link" class="btn-outline-grad" download style="font-size:.85rem;padding:.55rem 1.4rem;">
+            <i class="fa-solid fa-file-pdf"></i> Download Resume
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SKILLS
+============================================================ -->
+<section id="skills">
+  <div class="container">
+
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">My <span class="grad-text">Skills</span></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Front-End -->
+      <div class="col-lg-6 reveal">
+        <div class="skills-block">
+          <p class="skills-cat-title"><i class="fa-solid fa-palette me-1"></i> Front-End Development</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span class="skill-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="skill-chip"><i class="fa-brands fa-react"></i> React.js</span>
+            <span class="skill-chip"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+            <span class="skill-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap 5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back-End -->
+      <div class="col-lg-6 reveal">
+        <div class="skills-block">
+          <p class="skills-cat-title cyan"><i class="fa-solid fa-server me-1"></i> Back-End Development</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="skill-chip cyan"><i class="fa-brands fa-php"></i> PHP</span>
+            <span class="skill-chip cyan"><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span class="skill-chip cyan"><i class="fa-brands fa-python"></i> Python</span>
+            <span class="skill-chip cyan"><i class="fa-solid fa-code"></i> C++</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div class="col-lg-6 reveal">
+        <div class="skills-block">
+          <p class="skills-cat-title"><i class="fa-solid fa-database me-1"></i> Database</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="skill-chip"><i class="fa-solid fa-table"></i> MySQL Workbench</span>
+            <span class="skill-chip"><i class="fa-solid fa-database"></i> phpMyAdmin</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="col-lg-6 reveal">
+        <div class="skills-block">
+          <p class="skills-cat-title cyan"><i class="fa-solid fa-screwdriver-wrench me-1"></i> Tools & Platforms</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="skill-chip cyan"><i class="fa-brands fa-git-alt"></i> Git</span>
+            <span class="skill-chip cyan"><i class="fa-brands fa-github"></i> GitHub</span>
+            <span class="skill-chip cyan"><i class="fa-solid fa-code"></i> VS Code</span>
+            <span class="skill-chip cyan"><i class="fa-solid fa-microchip"></i> Arduino IDE</span>
+            <span class="skill-chip cyan"><i class="fa-brands fa-wordpress"></i> WordPress</span>
+            <span class="skill-chip cyan"><i class="fa-brands fa-google"></i> Google Colab</span>
+            <span class="skill-chip cyan"><i class="fa-brands fa-microsoft"></i> Microsoft 365</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PROJECTS
+============================================================ -->
+<section id="projects">
+  <div class="container">
+
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Featured <span class="grad-text">Projects</span></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="images/birthing-clinic.JPG" alt="birthing-clinic" />
+            <div class="project-type">Web Based</div>
+            <div class="project-overlay">
+              <a href="#" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h5>Birthing Clinic Management System</h5>
+            <p>A web-based management system for a birthing clinic, featuring patient records, appointment scheduling, and billing, built in PHP and MySQL.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Bootstrap 5</span>
+              <span class="tech-tag">DataTables</span>
+              <span class="tech-tag">Chart.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="images/Edu_Manage.jpg" alt="EduManage" />
+            <div class="project-type">Web Based/Web App</div>
+            <div class="project-overlay">
+              <a href="#" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h5>EduManage — School University Management System</h5>
+            <p>A full-featured university management system with student records, course registration, grade management, and administrative tools built in PHP and MySQL.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">Bootstrap 5</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">DataTables</span>
+              <span class="tech-tag">AJAX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="images/weatherapp.JPG" alt="Weather App" />
+            <div class="project-type">Web App</div>
+            <div class="project-overlay">
+              <a href="#" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h5>Weather Explorer App</h5>
+            <p>A weather forecasting app that provides real-time updates and detailed forecasts for users.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">OpenWeather API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="images/snakegame.JPG" alt="Snake Game" />
+            <div class="project-type">Game Development</div>
+            <div class="project-overlay">
+              <a href="#" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h5>Snake Game</h5>
+            <p>A classic Snake Game developed using C++ and Raylib, featuring real-time gameplay, player movement, collision detection, and score tracking. This project demonstrates fundamental game development concepts such as game loops, user input handling, and graphics rendering.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Raylib</span>
+              <span class="tech-tag">OOP</span>
+              <span class="tech-tag">Game Development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="images/Iotvermicomposting.jpg" alt="IoT Vermicomposting System" />
+            <div class="project-type">IoT</div>
+            <div class="project-overlay">
+              <a href="#" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h5>IoT-based Vermicomposting System (Capstone Project)</h5>
+            <p>An IoT-based Vermicomposting System designed to automate and monitor the composting process using smart sensors and connected devices. The system helps manage environmental conditions such as moisture and temperature to improve compost quality and support sustainable waste management practices.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">IoT</span>
+              <span class="tech-tag">Arduino</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Sensors</span>
+              <span class="tech-tag">Embedded Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-lg-4 col-md-6 reveal">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="images/spamornotspam.JPG" alt="ML Project" />
+            <div class="project-type">ML / Python</div>
+            <div class="project-overlay">
+              <a href="#" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h5>ML Project: Detecting Ham or Spam Email</h5>
+            <p>A Machine Learning project focused on detecting whether an email is ham or spam using text classification techniques. The system analyzes email content, extracts relevant features, and applies a trained model to accurately classify messages, helping improve email filtering and reduce unwanted spam. Built with Python and visualised in Google Colab.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">NumPy</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Jupyter Notebook</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     EDUCATION
+============================================================ -->
+<section id="education">
+  <div class="container">
+
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Education & <span class="grad-text">Certifications</span></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="row gy-5">
+
+      <!-- Timeline -->
+      <div class="col-lg-7 reveal">
+        <h5 class="mb-4" style="color:var(--white);font-size:1rem;">
+          <i class="fa-solid fa-graduation-cap me-2" style="color:var(--indigo);"></i>Academic Background
+        </h5>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-year">2024 — 2025</div>
+              <h5>Bachelor of Science in Computer Science</h5>
+              <div class="school">Northern Iloilo State University</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--cyan);box-shadow:var(--glow-c);"></div>
+            <div class="timeline-card">
+              <div class="timeline-year">2020 — 2021</div>
+              <h5>Senior High School — ICT Track</h5>
+              <div class="school" style="color:var(--cyan);">Iloilo King of Glory Christian Academy Inc.</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-year">2018 — 2019</div>
+              <h5>Junior High School</h5>
+              <div class="school">Iloilo King of Glory Christian Academy Inc.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="col-lg-5 reveal">
+        <h5 class="mb-4" style="color:var(--white);font-size:1rem;">
+          <i class="fa-solid fa-certificate me-2" style="color:var(--cyan);"></i>Certifications
+        </h5>
+        <div class="d-flex flex-column gap-3">
+
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div>
+              <h6>Data Analytics Essentials</h6>
+              <span>Cisco Networking Academy · 2026</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <h6>CS107: C++ Programming</h6>
+              <span>Saylor.org Academy · 2025</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+            <div>
+              <h6>Data Visualiziation using Python</h6>
+              <span>UniAthena · 2025</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+            <div>
+              <h6>Basic of Data Science</h6>
+              <span>UniAthena · 2025</span>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fa-solid fa-headset"></i></div>
+            <div>
+              <h6>Technical Support Fundamentals</h6>
+              <span>Cisco Networking Academy · 2025</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section id="contact">
+  <div class="container">
+
+    <div class="text-center mb-5 reveal">
+      <h2 class="section-title">Get In <span class="grad-text">Touch</span></h2>
+      <div class="section-divider"></div>
+      <p style="color:var(--muted);max-width:500px;margin:0 auto;">
+        Have a project in mind, a collaboration opportunity, or just want to connect? My inbox is always open.
+      </p>
+    </div>
+
+    <div class="row g-4 align-items-start">
+
+      <!-- Info column -->
+      <div class="col-lg-4 reveal">
+
+        <div class="d-flex flex-column gap-3 mb-4">
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h6>Email</h6>
+              <p>johnrae2002@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h6>Phone</h6>
+              <p>+63 930 825 5019</p>
+              <p>+63 994 674 9314</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h6>Location</h6>
+              <p>Iloilo City, Philippines</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="social-links-contact">
+          <a href="https://github.com/johnraealbay" class="social-btn github"    aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/johnrae-albay-795287378?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-btn linkedin"  aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/Luckyyy.09/" class="social-btn facebook"  aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/luckyy_rgb/" class="social-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@luckkyy_io?lang=en" class="social-btn tiktok"    aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Form -->
+      <div class="col-lg-8 reveal">
+        <div class="contact-form">
+          <form id="contactForm" novalidate>
+            <input type="hidden" name="access_key" value="9c1a1a98-81dc-4cc8-b198-cf994ceb1170" />
+            <input type="hidden" name="subject" value="New portfolio message from Johnrae Albay website" />
+            <input type="hidden" name="from_name" value="Johnrae Albay Portfolio" />
+            <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off" />
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <label class="form-label" for="contactName">Full Name <span style="color:#ef4444;">*</span></label>
+                <input type="text" class="form-control" id="contactName" name="name"
+                       placeholder="Your full name" autocomplete="name" required />
+                <div class="invalid-feedback" id="contactNameErr"></div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="contactEmail">Email Address <span style="color:#ef4444;">*</span></label>
+                <input type="email" class="form-control" id="contactEmail" name="email"
+                       placeholder="you@example.com" autocomplete="email" required />
+                <div class="invalid-feedback" id="contactEmailErr"></div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="contactSubject">Subject <span style="color:#ef4444;">*</span></label>
+                <input type="text" class="form-control" id="contactSubject" name="message_subject"
+                       placeholder="Project inquiry, internship, etc." required />
+                <div class="invalid-feedback" id="contactSubjectErr"></div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="contactMessage">Message <span style="color:#ef4444;">*</span></label>
+                <textarea class="form-control" id="contactMessage" name="message" rows="5"
+                          placeholder="Tell me about your project or opportunity…" required></textarea>
+                <div class="invalid-feedback" id="contactMessageErr"></div>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn-primary-grad w-100" id="contactSubmitBtn" style="justify-content:center;padding:.9rem;">
+                  <i class="fa-solid fa-paper-plane"></i> Send Message
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="container">
+    <div class="row align-items-center gy-4">
+
+      <div class="col-lg-4 text-center text-lg-start">
+        <div class="footer-brand">&lt;<span>Luckyy</span>/&gt; Johnrae Albay</div>
+        <div class="footer-tagline">Aspiring Software Engineer · Iloilo, PH</div>
+      </div>
+
+      <div class="col-lg-4 text-center">
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 text-center text-lg-end">
+        <div class="d-flex gap-2 justify-content-center justify-content-lg-end">
+          <a href="https://github.com/johnraealbay" class="social-btn github" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/johnrae-albay-795287378?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-btn linkedin" class="social-btn linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/Luckyyy.09/" class="social-btn facebook"  aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/luckyy_rgb/" class="social-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@luckkyy_io?lang=en" class="social-btn tiktok"    aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr style="border-color:var(--border);margin:1.5rem 0 1rem;" />
+
+    <p class="footer-copy">
+      &copy; 2026 <span>Johnrae Albay</span>. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+
+<!-- ---- Scroll-to-Top ---- -->
+<button id="scrollTop" aria-label="Scroll to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- ---- Toast notification ---- -->
+<div id="formToast" style="
+  position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(80px);
+  background:linear-gradient(135deg,#6366f1,#06b6d4);
+  color:#fff;padding:.85rem 1.8rem;border-radius:50px;
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.9rem;
+  box-shadow:0 8px 30px rgba(99,102,241,0.4);z-index:9999;
+  transition:transform 0.4s cubic-bezier(0.4,0,0.2,1),opacity 0.4s;
+  opacity:0;pointer-events:none;white-space:nowrap;
+" aria-live="polite"></div>
+
+<style>
+  #formToast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+</style>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Portfolio JS -->
+<script src="script.js"></script>
+</body>
+</html>
